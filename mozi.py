@@ -42,3 +42,11 @@ def bevetel(lista:list):
             if ulohely != " ":
                 bevetel += ulohely
     return bevetel
+
+def kihasznaltsag(lista:list):
+    foglaltUlohely = 0
+    for sor in lista:
+        for ulohely in sor:
+            if ulohely != 0 and ulohely != " ":
+                foglaltUlohely += 1
+    return round((foglaltUlohely/3),2)
