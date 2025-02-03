@@ -58,3 +58,16 @@ def teljesJegy(lista:list):
             if ulohely == 2500:
                 teljesDarab += 1
     return teljesDarab
+
+moziTerem = ulohelyek(moziTerem)
+for i in moziTerem:
+    print(i)
+megadottSzam = foglaltJegy(megadottSzam)
+vanSzabadHely = szabadHely(moziTerem, megadottSzam)
+if vanSzabadHely != None:
+    print("Van szabad hely, a/az",vanSzabadHely,". sorban.")
+else:
+    print("Nincs a megadottnak megfelelő számú hely egymás mellett.")
+print("A mozi össz bevétele:",bevetel(moziTerem))
+print("A mozi kihasználtsága:",kihasznaltsag(moziTerem),"%")
+print("A teljes áru jegyek száma:",teljesJegy(moziTerem),"db")
