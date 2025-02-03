@@ -50,3 +50,11 @@ def kihasznaltsag(lista:list):
             if ulohely != 0 and ulohely != " ":
                 foglaltUlohely += 1
     return round((foglaltUlohely/3),2)
+
+def teljesJegy(lista:list):
+    teljesDarab = 0
+    for sor in lista:
+        for ulohely in sor:
+            if ulohely == 2500:
+                teljesDarab += 1
+    return teljesDarab
