@@ -21,3 +21,16 @@ def foglaltJegy(szam:int):
         print("Adja meg a megvásárolni kívánt jegyek darabszámát!")
         szam = int(input())
     return szam
+
+def szabadHely(lista:list, szam:int):
+    i = 0
+    for sor in lista:
+        szabadHelyek = 0
+        i += 1
+        for ulohely in sor:
+            if ulohely == 0 and ulohely != " ":
+                szabadHelyek += 1
+            else:
+                szabadHelyek = 0
+            if szabadHelyek == szam:
+                return i
