@@ -34,3 +34,11 @@ def szabadHely(lista:list, szam:int):
                 szabadHelyek = 0
             if szabadHelyek == szam:
                 return i
+
+def bevetel(lista:list):
+    bevetel = 0
+    for sor in lista:
+        for ulohely in sor:
+            if ulohely != " ":
+                bevetel += ulohely
+    return bevetel
