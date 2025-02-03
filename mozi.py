@@ -15,3 +15,9 @@ def ulohelyek(lista:list):
             sorok.append(random.choice(arak))
         lista.append(sorok)
     return lista
+
+def foglaltJegy(szam:int):
+    while szam < 2 or szam > 5:
+        print("Adja meg a megvásárolni kívánt jegyek darabszámát!")
+        szam = int(input())
+    return szam
